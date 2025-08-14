@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Basics Quiz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #quiz-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .question-block p {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .options-container label {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .options-container label:hover {
+            background-color: #e9ecef;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        /* Styles for feedback */
+        .correct {
+            background-color: #d4edda !important;
+            border-color: #c3e6cb !important;
+        }
+        .incorrect {
+            background-color: #f8d7da !important;
+            border-color: #f5c6cb !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="quiz-container">
+        <h1>Networking Basics Quiz</h1>
+        <form id="quiz-form">
+            <div class="question-block">
+                <p>1. What is the primary function of a Wi-Fi SSID?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q1" value="a"> To encrypt the wireless network traffic.</label>
+                    <label><input type="radio" name="q1" value="b"> To serve as the public name that identifies a Wi-Fi network.</label>
+                    <label><input type="radio" name="q1" value="c"> To automatically assign IP addresses to devices.</label>
+                    <label><input type="radio" name="q1" value="d"> To connect your network to the internet.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>2. Which of the following best describes a key purpose of a Wi-Fi Password?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q2" value="a"> It makes the Wi-Fi network visible to nearby devices.</label>
+                    <label><input type="radio" name="q2" value="b"> It helps differentiate your network from your neighbor's.</label>
+                    <label><input type="radio" name="q2" value="c"> It encrypts data to prevent unauthorized users from viewing your traffic.</label>
+                    <label><input type="radio" name="q2" value="d"> It boosts the signal strength of the wireless router.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>3. A technician is setting up a new office printer so that it always has the same IP address. Which IPv4 method should they use?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q3" value="a"> DHCP</label>
+                    <label><input type="radio" name="q3" value="b"> DNS</label>
+                    <label><input type="radio" name="q3" value="c"> SSID</label>
+                    <label><input type="radio" name="q3" value="d"> Static</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>4. Which of the following is a valid example of an IPv4 address?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q4" value="a"> www.google.com</label>
+                    <label><input type="radio" name="q4" value="b"> 192.168.1.101</label>
+                    <label><input type="radio" name="q4" value="c"> MyHome_Guest</label>
+                    <label><input type="radio" name="q4" value="d"> P@ssword123!</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>5. When your computer sends a request to a website on the internet, which device acts as the 'exit door' from your local network?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q5" value="a"> The DHCP Server</label>
+                    <label><input type="radio" name="q5" value="b"> The DNS Server</label>
+                    <label><input type="radio" name="q5" value="c"> The Gateway</label>
+                    <label><input type="radio" name="q5" value="d"> The IoT VLAN</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>6. What is the function of DNS?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q6" value="a"> To secure a network with a password.</label>
+                    <label><input type="radio" name="q6" value="b"> To isolate smart devices on a separate network.</label>
+                    <label><input type="radio" name="q6" value="c"> To translate human-readable domain names into machine-readable IP addresses.</label>
+                    <label><input type="radio" name="q6" value="d"> To manually assign a permanent IP address to a device.</label>
+                </div>
+            </div>
+            
+            <div class="question-block">
+                <p>7. Which type of Wi-Fi network is considered insecure because it lacks a password and encryption?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q7" value="a"> Guest Wi-Fi</label>
+                    <label><input type="radio" name="q7" value="b"> Hidden Wi-Fi</label>
+                    <label><input type="radio" name="q7" value="c"> IoT Network</label>
+                    <label><input type="radio" name="q7" value="d"> Open Wi-Fi</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>8. Why is a 'Hidden' Wi-Fi network not considered a strong security measure?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q8" value="a"> Because it doesn't use a password.</label>
+                    <label><input type="radio" name="q8" value="b"> Because its presence can still be easily found with basic network scanning tools.</label>
+                    <label><input type="radio" name="q8" value="c"> Because it automatically connects all devices within range.</label>
+                    <label><input type="radio" name="q8" value="d"> Because it reduces the speed of the internet connection.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>9. What is the primary security benefit of creating a Guest Wi-Fi network?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q9" value="a"> It makes your internet connection faster for your main devices.</label>
+                    <label><input type="radio" name="q9" value="b"> It isolates visitors' devices from your main private network and personal files.</label>
+                    <label><input type="radio" name="q9" value="c"> It hides your main network's name from being publicly visible.</label>
+                    <label><input type="radio" name="q9" value="d"> It removes the need for guests to enter a password.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p>10. What is the most important reason to create a separate IoT VLAN or network for smart devices like cameras and sensors?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="q10" value="a"> To make them easier to connect to the internet.</label>
+                    <label><input type="radio" name="q10" value="b"> To improve their Wi-Fi signal strength.</label>
+                    <label><input type="radio" name="q10" value="c"> To contain security threats if an IoT device is hacked, protecting your primary network.</label>
+                    <label><input type="radio" name="q10" value="d"> To give them a higher priority for internet bandwidth.</label>
+                </div>
+            </div>
+
+            <button type="button" id="submit-btn">Submit Quiz</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const answers = {
+                q1: 'b', q2: 'c', q3: 'd', q4: 'b', q5: 'c',
+                q6: 'c', q7: 'd', q8: 'b', q9: 'b', q10: 'c'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            
+            // Reset previous feedback
+            form.querySelectorAll('label').forEach(label => {
+                label.classList.remove('correct', 'incorrect');
+            });
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const selectedOption = form.querySelector(`input[name="${question}"]:checked`);
+
+                if (selectedOption) {
+                    const parentLabel = selectedOption.parentElement;
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        parentLabel.classList.add('correct');
+                    } else {
+                        parentLabel.classList.add('incorrect');
+                        // Also show the correct answer
+                        const correctLabel = form.querySelector(`input[name="${question}"][value="${correctAnswer}"]`).parentElement;
+                        correctLabel.classList.add('correct');
+                    }
+                }
+            }
+            
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.textContent = `You scored ${score} out of 10.`;
+        });
+    </script>
+
+</body>
+</html>
